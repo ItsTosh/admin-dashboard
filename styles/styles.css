@@ -217,6 +217,16 @@ html {
   width: 80%;
 }
 
+.title ~ div > img {
+  margin-top: 3vh;  
+  height: 3vh;
+  width: 1vw;
+}
+
+.title ~ div {
+  margin-left: 80%;
+}
+
 .right-sidebar {
   display: grid; 
   grid-template-rows: 1fr 1fr;
