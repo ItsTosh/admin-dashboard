@@ -218,6 +218,7 @@ html {
 }
 
 .title ~ div > img {
+  cursor: pointer;
   margin-top: 3vh;  
   height: 3vh;
   width: 1vw;
