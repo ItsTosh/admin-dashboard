@@ -1,13 +1,28 @@
+/* fonts */ 
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('./fonts/roboto-regular-webfont.woff2') format('woff2'),
+       url('./fontsroboto-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
 * {
   margin: 0;
+}
+
+body,
+html {
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
 }
 
 .container {
   display: grid;
   height: 100vh;
   width: 100%;
-  grid-template-columns: 1fr 4fr;
-  grid-template-rows: 1fr 2fr;
+  grid-template-columns: 1fr 5fr;
+  grid-template-rows: 1fr 3fr;
 }
 
 .header {
@@ -15,8 +30,57 @@
 }
 
 .sidebar {
-  background-color: aqua;
+  background-color: #2299d5;
   grid-row: 1 / 3
+}
+
+.sidebar-header {
+  display: grid;
+  grid-auto-flow: column;
+  align-items: center;
+  justify-content: start;
+  margin-top: 2vh;
+  margin-left: 2vh;
+  gap: 2vh;
+}
+
+.logo {
+  height: 7vh;
+  width: 7vh;
+}
+
+.sidebar-title {
+  font-size: 2rem;
+  color: white;
+}
+
+.sidebar-links {
+  margin-top: 5vh;
+  margin-left: 4vh;
+  padding: 0;
+  list-style: none;
+}
+
+.sidebar-links > li > div {
+  display: grid;
+  grid-auto-flow: column;
+  align-items: center;
+  justify-content: start;
+}
+
+.sidebar-links > li:nth-child(1n + 2) {
+  margin-top: 2vh;
+}
+
+.sidebar-links > li img {
+  margin-right: 20px;
+  height: 4vh;
+}
+
+.sidebar-links > li a {
+  font-size: 1.3rem;
+  color: white;
+  font-weight: bold;
 }
 
 .content-container {
